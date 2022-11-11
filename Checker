@@ -42,7 +42,7 @@ Tanggal : ]]..(os.date("%m/%d/%Y, %H.%M %p"))..[["
         $embedObject = @{
             title = "<:bisof:1005439409405038632> **BOT CHECKER INFORMATION** <:bisof:1005439409405038632>"
             description = "<:avatar:992770955103449108> Pengguna Online GT : **]]..getServer().online..[[** 
-            Server : ||]]..getServer().ip..[[ ]]..getServer().port..[[||"
+            <:gems:992771642033975356> Server : ||]]..getServer().ip..[[ ]]..getServer().port..[[||"
             color = "]]..math.random(1111111,9999999)..[["
             footer = $footerObject
             fields = $fieldArray
