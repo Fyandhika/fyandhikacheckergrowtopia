@@ -4,7 +4,7 @@ webhookLink = "https://discordapp.com/api/webhooks/1040595053212602439/IrkXkegxW
 messageId = "1040595831054663720" -- Webhook message id
 showIp = true -- set false if not showing ip
 checkerDelay = 500 -- Delay between each check
-webhookDelay = 45000 -- Delay between each webhook
+webhookDelay = 30000 -- Delay between each webhook
 
 -- if not showIp 
 ip[1] = {{"fyanrty180","fyanrty181","fyanrty182"}}
