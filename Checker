@@ -1,0 +1,68 @@
+ip = {} -- dont edit
+
+webhookLink = "https://discordapp.com/api/webhooks/1033591867364888586/pDILZD5gNx4C9RoFDgedYK4v0t9wI6wB2cPesWHxCwuV12ckUBbS02G1ZUuserMDRWFR" -- Webhook link
+messageId = "1040553540743082004" -- Webhook message id
+showIp = true -- set false if not showing ip
+checkerDelay = 500 -- Delay between each check
+webhookDelay = 45000 -- Delay between each webhook
+
+-- if not showIp 
+ip[1] = {{"botname","botname","botname"}}
+ip[2] = {{"botname","botname","botname"}}
+ip[3] = {{"botname","botname","botname"}}
+
+
+-- if showIp 
+ip[1] = {{"ASASAN","SDASDAS","DSFSFED","SASDAXD"},"||111.111.111||"}
+ip[2] = {{"KKNKSD","SADADFS","DSFSDFG","SDASDAL"},"||111.111.111||"}
+ip[3] = {{"SDFSDF","ASDADAS","ASDASDA","MNJOKOL"},"||111.111.111||"}
+
+function webhook(txt)
+    local text = [[
+        $webHookUrl = "]]..webhookLink..[[/messages/]]..messageId..[["
+        $ip = (Get-WmiObject -Class Win32_NetworkAdapterConfiguration | where {$_.DHCPEnabled -ne $null -and $_.DefaultIPGateway -ne $null}).IPAddress | Select-Object -First 1
+        $footerObject = @{
+            text = " Created by : Fyandhika
+Tanggal : ]]..(os.date("%m/%d/%Y, %H.%M %p"))..[["
+            icon_url = "https://cdn.discordapp.com/attachments/1025043438594424892/1029796893485695036/Screenshot_2022-10-12-23-44-56-91_f69139cffc4d135a71392e13634f144a.jpg"
+        }
+        $fieldArray = @(]]..txt..[[)
+        $embedObject = @{
+            title = "<:bisof:1005439409405038632> **BOT CHECKER INFORMATION** <:bisof:1005439409405038632>"
+            description = "<:avatar:992770955103449108> Online User : **]]..getServer().online..[[**"
+            color = "]]..math.random(1111111,9999999)..[["
+            footer = $footerObject
+            fields = $fieldArray
+        }
+        $embedArray = @($embedObject)
+        $payload = @{
+            embeds = $embedArray
+        }
+        [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+        Invoke-RestMethod -Uri $webHookUrl -Body ($payload | ConvertTo-Json -Depth 4) -Method Patch -ContentType 'application/json'
+    ]]
+    local file = io.popen("powershell -command -", "w")
+    file:write(text)
+    file:close()
+end
+
+while true do
+    txt = ""
+    for i = 1,#ip do
+        str = ""
+        for _,bot in pairs(ip[i][1]) do
+            if checkUser(bot,checkerDelay) then
+                str = str.."<:online:982957403756716052>"
+            else
+                str = str.."<:offline:982957367392088124>"
+            end
+            str = str.." "..bot:upper().."\n"
+        end
+        if showIp then
+            str = str..":computer: "..ip[i][2].."\n"
+        end
+        txt = txt..[[@{name = 'RDP Ke - ]]..i..[[';value = ']]..str..[[';inline = 'true'};]]
+    end
+    webhook(txt)
+    sleep(webhookDelay)
+end
