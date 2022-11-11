@@ -1,21 +1,27 @@
 ip = {} -- dont edit
 
-webhookLink = "https://discordapp.com/api/webhooks/1033591867364888586/pDILZD5gNx4C9RoFDgedYK4v0t9wI6wB2cPesWHxCwuV12ckUBbS02G1ZUuserMDRWFR" -- Webhook link
-messageId = "1040553540743082004" -- Webhook message id
-showIp = true -- set false if not showing ip
+webhookLink = "https://discordapp.com/api/webhooks/1040595053212602439/IrkXkegxW8RXNaaEsJgG0yuYpGoGT4pOcHkQtNkF1Pv9IftL4euLZBMsa41eDNVEo_3Q" -- Webhook link
+messageId = "1040595831054663720" -- Webhook message id
+showIp = false -- set false if not showing ip
 checkerDelay = 500 -- Delay between each check
 webhookDelay = 45000 -- Delay between each webhook
 
 -- if not showIp 
-ip[1] = {{"botname","botname","botname"}}
-ip[2] = {{"botname","botname","botname"}}
-ip[3] = {{"botname","botname","botname"}}
+ip[1] = {{"fyanrty180","fyanrty181","fyanrty182"}}
+ip[2] = {{"fyanrty183","fyanrty184","fyanrty185"}}
+ip[3] = {{"fyanrty186","fyanrty187","fyanrty188"}}
+ip[4] = {{"fyanrty189","fyanrty190","fyanrty191"}}
+ip[5] = {{"fyanrty192","fyanrty193","fyanrty194"}}
+ip[6] = {{"fyanrty195","fyanrty196","fyanrty197"}}
 
 
 -- if showIp 
 ip[1] = {{"ASASAN","SDASDAS","DSFSFED","SASDAXD"},"||111.111.111||"}
 ip[2] = {{"KKNKSD","SADADFS","DSFSDFG","SDASDAL"},"||111.111.111||"}
 ip[3] = {{"SDFSDF","ASDADAS","ASDASDA","MNJOKOL"},"||111.111.111||"}
+ip[4] = {{"ASASAN","SDASDAS","DSFSFED","SASDAXD"},"||111.111.111||"}
+ip[5] = {{"KKNKSD","SADADFS","DSFSDFG","SDASDAL"},"||111.111.111||"}
+ip[6] = {{"SDFSDF","ASDADAS","ASDASDA","MNJOKOL"},"||111.111.111||"}
 
 function webhook(txt)
     local text = [[
