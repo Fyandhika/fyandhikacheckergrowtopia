@@ -16,12 +16,6 @@ ip[3] = {{"botname","botname","botname"}}
 ip[1] = {{"ASASAN","SDASDAS","DSFSFED","SASDAXD"},"||111.111.111||"}
 ip[2] = {{"KKNKSD","SADADFS","DSFSDFG","SDASDAL"},"||111.111.111||"}
 ip[3] = {{"SDFSDF","ASDADAS","ASDASDA","MNJOKOL"},"||111.111.111||"}
-ip[4] = {{"SDFSDF","ASDADAS","ASDASDA","MNJOKOL"},"||111.111.111||"}
-ip[5] = {{"SDFSDF","ASDADAS","ASDASDA","MNJOKOL"},"||111.111.111||"}
-ip[6] = {{"SDFSDF","ASDADAS","ASDASDA","MNJOKOL"},"||111.111.111||"}
-ip[7] = {{"SDFSDF","ASDADAS","ASDASDA","MNJOKOL"},"||111.111.111||"}
-ip[8] = {{"SDFSDF","ASDADAS","ASDASDA","MNJOKOL"},"||111.111.111||"}
-ip[9] = {{"SDFSDF","ASDADAS","ASDASDA","MNJOKOL"},"||111.111.111||"}
 
 function webhook(txt)
     local text = [[
@@ -35,7 +29,7 @@ Tanggal : ]]..(os.date("%m/%d/%Y, %H.%M %p"))..[["
         $fieldArray = @(]]..txt..[[)
         $embedObject = @{
             title = "<:bisof:1005439409405038632> **BOT CHECKER INFORMATION** <:bisof:1005439409405038632>"
-            description = "<:avatar:992770955103449108> Online User : **]]..getServer().online..[[**"
+            description = "<:avatar:992770955103449108> Pengguna Online GT : **]]..getServer().online..[[** |||]]..getServer().ip..[[ ]]..getServer().port..[[|||"
             color = "]]..math.random(1111111,9999999)..[["
             footer = $footerObject
             fields = $fieldArray
