@@ -16,18 +16,24 @@ ip[6] = {{"fyanrty195","fyanrty196","fyanrty197"}}
 ip[7] = {{"fyanrty192","fyanrty193","fyanrty194"}}
 ip[8] = {{"fyanrty195","fyanrty196","fyanrty197"}}
 ip[9] = {{"fyanrty195","fyanrty196","fyanrty197"}}
+ip[10] = {{"fyanrty192","fyanrty193","fyanrty194"}}
+ip[11] = {{"fyanrty195","fyanrty196","fyanrty197"}}
+ip[12] = {{"fyanrty195","fyanrty196","fyanrty197"}}
 
 
 -- if showIp 
-ip[1] = {{"fyanrty180","fyanrty181","fyanrty182"},"||111.111.111||"}
-ip[2] = {{"fyanrty183","fyanrty184","fyanrty185"},"||111.111.111||"}
-ip[3] = {{"fyanrty186","fyanrty187","fyanrty188"},"||111.111.111||"}
-ip[4] = {{"fyanrty189","fyanrty190","fyanrty191"},"||111.111.111||"}
-ip[5] = {{"fyanrty192","fyanrty193","fyanrty194"},"||111.111.111||"}
-ip[6] = {{"fyanrty195","fyanrty196","fyanrty197"},"||111.111.111||"}
-ip[7] = {{"fyanrty198","fyanrty199","fyanrty200"},"||111.111.111||"}
+ip[1] = {{"kosong","kosong","kosong"},"||111.111.111||"}
+ip[2] = {{"kosong","kosong","kosong"},"||111.111.111||"}
+ip[3] = {{"kosong","kosong","kosong"},"||111.111.111||"}
+ip[4] = {{"kosong","kosong","kosong"},"||111.111.111||"}
+ip[5] = {{"kosong","kosong","kosong"},"||111.111.111||"}
+ip[6] = {{"kosong","kosong","kosong"},"||111.111.111||"}
+ip[7] = {{"kosong","kosong","kosong"},"||111.111.111||"}
 ip[8] = {{"kosong","kosong","kosong"},"||111.111.111||"}
 ip[9] = {{"kosong","kosong","kosong"},"||111.111.111||"}
+ip[10] = {{"kosong","kosong","kosong"},"||111.111.111||"}
+ip[11] = {{"kosong","kosong","kosong"},"||111.111.111||"}
+ip[12] = {{"kosong","kosong","kosong"},"||111.111.111||"}
 
 function webhook(txt)
     local text = [[
@@ -42,7 +48,9 @@ Tanggal : ]]..(os.date("%m/%d/%Y, %H.%M %p"))..[["
         $embedObject = @{
             title = "<:bisof:1005439409405038632> **BOT CHECKER INFORMATION** <:bisof:1005439409405038632>"
             description = "<:avatar:992770955103449108> Pengguna Online GT : **]]..getServer().online..[[** 
-            <:gems:992771642033975356> Server : ||]]..getServer().ip..[[ ]]..getServer().port..[[||"
+            <:gems:992771642033975356> Server : ||]]..getServer().ip..[[ ]]..getServer().port..[[|| 
+            <a:bot:1038446548821999616> Bot Name : ]]..getBot().name..[[
+            <a:arrowz:1038444769141063850> Status Bot : ]]..getBot().status..[["
             color = "]]..math.random(1111111,9999999)..[["
             footer = $footerObject
             fields = $fieldArray
