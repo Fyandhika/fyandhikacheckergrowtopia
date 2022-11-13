@@ -28,7 +28,7 @@ ip[18] = {{"fyanrty195","fyanrty196","fyanrty197"}}
 
 
 -- if showIp 
-ip[1] = {{"kosong","kosong","kosong"},"||111.111.111||"}
+ip[1] = {{"fyanrty190","kosong","kosong"},"||111.111.111||"}
 ip[2] = {{"kosong","kosong","kosong"},"||111.111.111||"}
 ip[3] = {{"kosong","kosong","kosong"},"||111.111.111||"}
 ip[4] = {{"kosong","kosong","kosong"},"||111.111.111||"}
