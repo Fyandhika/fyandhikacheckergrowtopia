@@ -28,8 +28,8 @@ ip[18] = {{"fyanrty195","fyanrty196","fyanrty197"}}
 
 
 -- if showIp 
-ip[1] = {{"fyanxplant16","fyanxplant17","kosong"},"||111.111.111||"}
-ip[2] = {{"fyanxplant18","kosong","kosong"},"||111.111.111||"}
+ip[1] = {{"kosong","kosong","kosong"},"||111.111.111||"}
+ip[2] = {{"kosong","kosong","kosong"},"||111.111.111||"}
 ip[3] = {{"kosong","kosong","kosong"},"||111.111.111||"}
 ip[4] = {{"kosong","kosong","kosong"},"||111.111.111||"}
 ip[5] = {{"kosong","kosong","kosong"},"||111.111.111||"}
@@ -63,7 +63,8 @@ Tanggal : ]]..(os.date("%m/%d/%Y, %H.%M %p"))..[["
             <:gems:992771642033975356> Server : ||]]..getServer().ip..[[ ]]..getServer().port..[[|| 
             <a:bot:1038446548821999616> Bot Name : ]]..getBot().name..[[                           
             <a:arrowz:1038444769141063850> Status Bot : ]]..getBot().status..[[                    
-            <:world:992865877127090307> World Afk : ||]]..getWorld().name..[[||                    "
+            <:world:992865877127090307> World Afk : ||]]..getWorld().name..[[||                    
+            :computer: IP : $ipv4                                                                  "
             color = "]]..math.random(1111111,9999999)..[["
             footer = $footerObject
             fields = $fieldArray
