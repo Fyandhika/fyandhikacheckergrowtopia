@@ -64,7 +64,7 @@ Tanggal : ]]..(os.date("%m/%d/%Y, %H.%M %p"))..[["
             <a:bot:1038446548821999616> Bot Name : ]]..getBot().name..[[                           
             <a:arrowz:1038444769141063850> Status Bot : ]]..getBot().status..[[                    
             <:world:992865877127090307> World Afk : ||]]..getWorld().name..[[||                    
-            :computer: IP : $ipv4                                                                  "
+            :computer: IP : $ipv4$                                                                  "
             color = "]]..math.random(1111111,9999999)..[["
             footer = $footerObject
             fields = $fieldArray
